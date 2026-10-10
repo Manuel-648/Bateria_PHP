@@ -42,7 +42,8 @@ if (count($_SESSION["historial"]) > 0) {
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin-top: 60px; }
         .dado { font-size: 120px; line-height: 1; }
-        button { font-size: 18px; padding: 10px 24px; cursor: pointer; }
+        button { font-size: 18px; padding: 10px 24px; cursor: pointer; margin: 0 5px; }
+        ul { list-style-type: none; padding: 0; }
     </style>
 </head>
 <body>
@@ -50,6 +51,7 @@ if (count($_SESSION["historial"]) > 0) {
 
     <form method="get" action="parte1.php">
         <button type="submit" name="lanzar" value="1">Lanzar dado</button>
+        <button type="submit" name="reiniciar" value="1">Reiniciar dado</button>
     </form>
 
     <?php echo $salida; ?>
