@@ -26,9 +26,6 @@ if (isset($_GET["lanzar"])) {
     $_SESSION["historial"][] = $resultado;
     $salida = "<div class='dado'>" . $caras[$resultado] . "</div>";
     $salida .= "<p>Ha salido el número: <strong>" . $resultado . "</strong></p>";
-
-    $salida = "<div class= 'dado'>" . $caras[$resultado] . "</div>";
-    $salida .= "<p>Ha salido el número: <strong>" . $resultado . "</strong></p>";
 }
 
 // Si hay tiradas guardadas, preparamos la lista del historial
