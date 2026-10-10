@@ -52,7 +52,7 @@ if (count($_SESSION["historial"]) > 0) {
 <body>
     <h1>Lanzamiento de dados</h1>
 
-    <form method="get" action="parte1.php">
+    <form method="get" action="parte2.php">
         <button type="submit" name="lanzar" value="1">Lanzar dado</button>
         <button type="submit" name="reiniciar" value="1">Reiniciar dado</button>
     </form>
