@@ -11,6 +11,11 @@ if (!isset($_SESSION["historial"])) {
     $_SESSION["historial"] = [];
 }
 
+// Si se pulsa el botón de reiniciar, borramos el historial
+if (isset($_GET["reiniciar"])) {
+    $_SESSION["historial"] = [];
+}
+
 // Por defecto no se muestra nada
 $salida = "";
 $listaHistorial = "";
