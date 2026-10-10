@@ -41,6 +41,8 @@ if (isset($_GET["introduccion"]) && isset($_GET["accion"]) && isset($_GET["cierr
             <option value="Tú sabes que">Tú sabes que</option>
             <option value="No hay duda de que">No hay duda de que</option>
             <option value="Al final">Al final</option>
+            <option value="La gente no se da cuenta de que">La gente no se da cuenta de que</option>
+            <option value="La gente no se da cuenta de que">La gente no se da cuenta de que</option>
         </select>
 
         <select name="accion">
@@ -49,6 +51,8 @@ if (isset($_GET["introduccion"]) && isset($_GET["accion"]) && isset($_GET["cierr
             <option value="nunca subestimes">nunca subestimes</option>
             <option value="yo siempre digo que">yo siempre digo que</option>
             <option value="el secreto está en">el secreto está en</option>
+            <option value="hay que tener mucho cuidado con">hay que tener mucho cuidado con</option>
+            <option value="nadie te cuenta la verdad sobre">nadie te cuenta la verdad sobre</option>
         </select>
 
         <select name="cierre">
@@ -57,6 +61,8 @@ if (isset($_GET["introduccion"]) && isset($_GET["accion"]) && isset($_GET["cierr
             <option value="los chemtrails">los chemtrails</option>
             <option value="la nube">la nube</option>
             <option value="las crypto">las crypto</option>
+            <option value="los chiringuitos que pagamos entre todos.">los chiringuitos que pagamos entre todos.</option>
+            <option value="los bancos y sus comisiones">los bancos y sus comisiones</option>
         </select>
 
         <br>
