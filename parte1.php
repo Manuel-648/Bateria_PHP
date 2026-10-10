@@ -23,6 +23,7 @@ $listaHistorial = "";
 // Si se pulsó el botón, lanzamos el dado y preparamos el texto a mostrar
 if (isset($_GET["lanzar"])) {
     $resultado = rand(1, 6);
+    $_SESSION["historial"][] = $resultado;
     $salida = "<div class='dado'>" . $caras[$resultado] . "</div>";
     $salida .= "<p>Ha salido el número: <strong>" . $resultado . "</strong></p>";
 
