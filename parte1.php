@@ -1,16 +1,37 @@
 <?php
 
+//Activa las sesiones: permite recordar datos entre una tirada y la siguiente
+session_start();
+
 // Lista de dibujos de dado (posición 1 a 6)
 $caras = ["", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
 
+//Si es la primera vez, creamos el historial vacío
+if (!isset($_SESSION["historial"])) {
+    $_SESSION["historial"] = [];
+}
+
 // Por defecto no se muestra nada
 $salida = "";
+$listaHistorial = "";
 
 // Si se pulsó el botón, lanzamos el dado y preparamos el texto a mostrar
 if (isset($_GET["lanzar"])) {
     $resultado = rand(1, 6);
     $salida = "<div class='dado'>" . $caras[$resultado] . "</div>";
     $salida .= "<p>Ha salido el número: <strong>" . $resultado . "</strong></p>";
+
+    $salida = "<div class= 'dado'>" . $caras[$resultado] . "</div>";
+    $salida .= "<p>Ha salido el número: <strong>" . $resultado . "</strong></p>";
+}
+
+// Si hay tiradas guardadas, preparamos la lista del historial
+if (count($_SESSION["historial"]) > 0) {
+    $listaHistorial = "<h2>Historial de tiradas:</h2><ul>";
+    foreach ($_SESSION["historial"] as $posicion => $valor) {
+        $listaHistorial .= "<li>" . $caras[$valor] . " (Número: " . $valor . ")</li>";
+    }
+    $listaHistorial .= "</ul>";
 }
 ?>
 <!DOCTYPE html>
@@ -32,5 +53,6 @@ if (isset($_GET["lanzar"])) {
     </form>
 
     <?php echo $salida; ?>
+    <?php echo $listaHistorial; ?>
 </body>
 </html>
